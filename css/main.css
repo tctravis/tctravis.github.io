@@ -198,3 +198,24 @@ textarea {
   h2,
   h3 {
     page-break-after: avoid; } }
+
+.print {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+  -ms-flex-align: start;
+  align-items: flex-start; }
+  .print .media-figure {
+    margin-right: 1em; }
+  .print .media-body {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+
+.print {
+  background-color: grey;
+  margin: 0; }
