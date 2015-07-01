@@ -1,0 +1,469 @@
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,700);
+html {
+  color: #222;
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+.browserupgrade {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Hide visually and from screen readers:
+ */
+.hidden {
+  display: none !important; }
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+figure {
+  margin: 0; }
+
+img {
+  max-width: 100%; }
+
+a {
+  text-decoration: none;
+  border-bottom-width: 1px;
+  border-bottom-style: dashed; }
+  a:hover {
+    border-bottom-style: dotted; }
+
+*:last-child {
+  margin-bottom: 0; }
+
+.wrap {
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: content-box;
+  padding: 0 20px; }
+  .wrap:after {
+    content: " ";
+    display: block;
+    clear: both; }
+
+@media (min-width: 28.75em) {
+  .featured {
+    width: 57.14286%;
+    float: left;
+    margin-right: 2.85714%; } }
+
+@media (min-width: 62.5em) {
+  .featured {
+    width: 40%;
+    float: left;
+    margin-right: 2.85714%; } }
+
+@media (min-width: 28.75em) {
+  .misc-info {
+    width: 100%;
+    float: left;
+    margin-left: 0;
+    margin-right: 0; }
+    .misc-info .about {
+      width: 40%;
+      float: right;
+      margin-right: 0; }
+    .misc-info .blog {
+      width: 57.14286%;
+      float: left;
+      margin-right: 2.85714%; } }
+
+@media (min-width: 62.5em) {
+  .misc-info {
+    width: 22.85714%;
+    float: left;
+    margin-right: 2.85714%; }
+    .misc-info .about {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; }
+    .misc-info .blog {
+      width: 100%;
+      float: left;
+      margin-left: 0;
+      margin-right: 0; } }
+
+@media (min-width: 28.75em) {
+  .galleries {
+    width: 40%;
+    float: right;
+    margin-right: 0; } }
+
+@media (min-width: 62.5em) {
+  .galleries {
+    width: 31.42857%;
+    float: right;
+    margin-right: 0; } }
+
+.site-title, .h1, .h2, .button {
+  font-family: 'Montserrat', 'Open Sans', arial, sans-serif;
+  font-weight: 700; }
+
+.date, .print figcaption, body {
+  font-family: 'Open Sans', arial, sans-serif;
+  font-weight: 400; }
+
+.date, .print figcaption {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+body {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5; }
+
+.site-title {
+  color: #003153;
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1;
+  margin: 0;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-left: 4px dotted #003153;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: inline-block; }
+
+.h1, .h2 {
+  line-height: 1.2; }
+
+.h1 {
+  font-size: 22px;
+  font-size: 1.375rem; }
+  @media (min-width: 28.75em) {
+    .h1 {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+  @media (min-width: 62.5em) {
+    .h1 {
+      font-size: 26px;
+      font-size: 1.625rem; } }
+
+.h2 {
+  font-size: 22px;
+  font-size: 1.375rem; }
+  @media (min-width: 28.75em) {
+    .h2 {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+  @media (min-width: 62.5em) {
+    .h2 {
+      font-size: 26px;
+      font-size: 1.625rem; } }
+
+.h3 {
+  font-size: 18px;
+  font-size: 1.125rem; }
+
+.print figcaption {
+  margin: 0; }
+
+.page-footer, .featured {
+  background-color: #1a1a1a;
+  border: none !important;
+  color: #fff; }
+  .page-footer a, .featured a {
+    color: #CC7722; }
+  .page-footer .button, .featured .button {
+    background-color: #CC7722;
+    color: #000; }
+
+.blog, .gallery-pollards {
+  border-color: #003153; }
+  .blog .h1, .gallery-pollards .h1, .blog .h2, .gallery-pollards .h2, .blog a, .gallery-pollards a {
+    color: #003153; }
+  .blog .button, .gallery-pollards .button {
+    background-color: #003153;
+    color: #fff; }
+
+.gallery-suffolk {
+  border-color: #9C3108; }
+  .gallery-suffolk .h1, .gallery-suffolk .h2, .gallery-suffolk a {
+    color: #9C3108; }
+  .gallery-suffolk .button {
+    background-color: #9C3108;
+    color: #fff; }
+
+.about {
+  border-color: #CC7722; }
+  .about .h1, .about .h2, .about a {
+    color: #CC7722; }
+  .about .button {
+    background-color: #CC7722;
+    color: #fff; }
+
+.button {
+  display: inline-block;
+  padding: 1px 10px 0;
+  text-decoration: none;
+  border-bottom: none;
+  text-transform: uppercase; }
+  .button:hover {
+    border-bottom: none; }
+
+.image-gallery {
+  margin-bottom: 0;
+  overflow: hidden;
+  padding-left: 0; }
+  .image-gallery li {
+    list-style: none;
+    padding-bottom: 9.09091%;
+    text-align: center;
+    width: 45.45455%;
+    float: left; }
+    .image-gallery li:nth-child(2n + 1) {
+      margin-left: 0;
+      margin-right: -100%;
+      clear: both;
+      margin-left: 0; }
+    .image-gallery li:nth-child(2n + 2) {
+      margin-left: 54.54545%;
+      margin-right: -100%;
+      clear: none; }
+
+.test {
+  display: flex; }
+
+.featured, .about, .blog, .gallery-pollards, .gallery-suffolk {
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+  overflow: hidden;
+  padding: 20px 0 25px;
+  margin-bottom: 0; }
+  .featured .h1, .about .h1, .blog .h1, .gallery-pollards .h1, .gallery-suffolk .h1, .featured .h2, .about .h2, .blog .h2, .gallery-pollards .h2, .gallery-suffolk .h2 {
+    margin: 0;
+    padding: 0 0 10px 0; }
+  @media (min-width: 28.75em) {
+    .featured:first-child, .about:first-child, .blog:first-child, .gallery-pollards:first-child, .gallery-suffolk:first-child {
+      border-top: 1px dotted; } }
+  .featured .image-wrapper, .about .image-wrapper, .blog .image-wrapper, .gallery-pollards .image-wrapper, .gallery-suffolk .image-wrapper {
+    overflow: hidden; }
+
+.featured {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.blog-post {
+  margin-bottom: 20px; }
+  .blog-post .blog-title {
+    margin-bottom: 0.5em; }
+  .blog-post .blog-date {
+    margin-top: 0; }
+
+.page-header {
+  padding: 20px 0; }
+
+.page-footer {
+  margin-top: 20px;
+  padding: 20px 0; }
+  .page-footer :first-child {
+    margin-top: 0; }
+
+@media (min-width: 28.75em) and (max-width: 62.5em) {
+  .about {
+    border-top: none !important; } }
+
+@media (min-width: 28.75em) and (max-width: 62.5em) {
+  .blog {
+    border-top: 1px dotted;
+    margin-top: -1px; } }
+
+.gallery-suffolk .smokehouse {
+  width: 35.71429%;
+  float: left;
+  margin-right: 7.14286%; }
+
+.gallery-suffolk .beachhouse,
+.gallery-suffolk .crambe {
+  width: 57.14286%;
+  float: right;
+  margin-right: 0; }

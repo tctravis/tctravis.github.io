@@ -1,0 +1,63 @@
+@import 'modules/utility';
+
+@import 'partials/base';
+
+@import 'partials/grids';
+@import 'partials/type';
+@import 'partials/media';
+@import 'partials/colors';
+@import 'partials/buttons';
+@import 'partials/gallery';
+@import 'partials/content-block';
+@import 'partials/blog';
+@import 'partials/page-header';
+@import 'partials/page-footer';
+
+
+//home page
+.featured {
+	@extend %contentBlockBgColor;
+	@extend %themeBlackBg;
+}
+.about {
+	@extend %contentBlock;
+	@extend %themeYellowOchre;
+	@include breakpoint(pxToEms($bp-main-one) pxToEms($bp-main-two)) {
+		border-top: none !important;
+	}
+}
+.blog {
+	@extend %contentBlock;
+	@extend %themePrussianBlue;
+	@include breakpoint(pxToEms($bp-main-one) pxToEms($bp-main-two)) {
+		border-top: 1px dotted;
+		margin-top: -1px;
+	}
+}
+.gallery-pollards {
+	@extend %contentBlock;
+	@extend %themePrussianBlue;
+}
+.gallery-suffolk {
+	@extend %contentBlock;
+	@extend %themeBurntSienna;
+	.smokehouse {
+		@include span(2 of 5);
+	}
+	.beachhouse,
+	.crambe {
+		@include span(3 of 5 last);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

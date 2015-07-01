@@ -1,0 +1,20 @@
+{
+  "name": "TT Boilerplate",
+  "version": "5.2.0",
+  "homepage": "https://github.com/h5bp/html5-boilerplate",
+  "authors": [
+    "Toby Travis <Toby.Travis@monitisecreate.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "susy": "~2.2.5",
+    "breakpoint-sass": "~2.6.1"
+  }
+}
