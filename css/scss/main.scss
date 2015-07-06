@@ -8,6 +8,7 @@
 @import 'partials/colors';
 @import 'partials/buttons';
 @import 'partials/gallery';
+@import 'partials/print';
 @import 'partials/content-block';
 @import 'partials/blog';
 @import 'partials/page-header';
@@ -15,40 +16,64 @@
 
 
 //home page
-.featured {
-	@extend %contentBlockBgColor;
-	@extend %themeBlackBg;
-}
-.about {
-	@extend %contentBlock;
-	@extend %themeYellowOchre;
-	@include breakpoint(pxToEms($bp-main-one) pxToEms($bp-main-two)) {
-		border-top: none !important;
+.layout_home {
+
+	.featured {
+		@extend %contentBlockBgColor;
+		@extend %themeBlackBg;
 	}
+	.about {
+		@extend %contentBlock;
+		@extend %themePrussianBlue;
+		@include breakpoint(pxToEms($bp-main-one) pxToEms($bp-main-two)) {
+			border-top: none !important;
+		}
+	}
+	.blog-list {
+		@extend %contentBlock;
+		@extend %themeYellowOchre;
+	}
+	.galleries {
+		.single-print {
+			@extend %contentBlock;
+			@extend %themePrussianBlue;
+		}
+		.series-teaser {
+			@extend %contentBlock;
+			@extend %themeYellowOchre;
+		}
+	}
+	
 }
-.blog {
+
+
+// print pages
+.layout_print {
+
+	.series-gallery {
+		@extend %contentBlock;
+		@extend %themePrussianBlue;
+	}
+	.print-related {
+		border-bottom: none;
+		border-top-style: dotted;
+		border-top-width: 1px;
+	}
+	@include breakpoint(pxToEms($bp-main-one)) {
+		.print-related {
+			border-top: none;
+		}
+	}
+
+}
+
+
+// series pages
+.about-series {
 	@extend %contentBlock;
 	@extend %themePrussianBlue;
-	@include breakpoint(pxToEms($bp-main-one) pxToEms($bp-main-two)) {
-		border-top: 1px dotted;
-		margin-top: -1px;
-	}
 }
-.gallery-pollards {
-	@extend %contentBlock;
-	@extend %themePrussianBlue;
-}
-.gallery-suffolk {
-	@extend %contentBlock;
-	@extend %themeBurntSienna;
-	.smokehouse {
-		@include span(2 of 5);
-	}
-	.beachhouse,
-	.crambe {
-		@include span(3 of 5 last);
-	}
-}
+
 
 
 
