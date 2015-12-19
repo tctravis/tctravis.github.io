@@ -543,6 +543,9 @@ body {
 .print figcaption {
   margin: 0; }
 
+.layout_print .print img {
+  border: 10px solid #fafafa; }
+
 .layout_home .featured, .layout_home .about, .layout_home .blog-list, .layout_home .galleries .single-print, .layout_home .galleries .series-teaser, .layout_print .series-gallery, .about-series {
   border-bottom-style: dotted;
   border-bottom-width: 1px;
