@@ -299,7 +299,7 @@ a {
 @media (min-width: 28.75em) {
   .layout_post .blog-content,
   .layout_blog .blog-content {
-    width: 57.14286%;
+    width: 65.71429%;
     float: left;
     margin-right: 2.85714%; }
   .layout_post .blog-related,
@@ -409,7 +409,7 @@ a {
 
 @media (min-width: 28.75em) {
   .layout_print .print-body {
-    width: 57.14286%;
+    width: 65.71429%;
     float: left;
     margin-right: 2.85714%; }
   .layout_print .print-related {
@@ -498,16 +498,6 @@ body {
   font-size: 18px;
   font-size: 1.125rem; }
 
-.page-footer {
-  background-color: #1a1a1a;
-  border: none !important;
-  color: #fff; }
-  .page-footer a {
-    color: #CC7722; }
-  .page-footer .button {
-    background-color: #CC7722;
-    color: #000; }
-
 .print, .layout_home .about, .layout_home .galleries .single-print, .layout_print .series-gallery, .about-series {
   border-color: #003153; }
   .print .h1, .layout_home .about .h1, .layout_home .galleries .single-print .h1, .layout_print .series-gallery .h1, .about-series .h1, .print .h2, .layout_home .about .h2, .layout_home .galleries .single-print .h2, .layout_print .series-gallery .h2, .about-series .h2, .print a, .layout_home .about a, .layout_home .galleries .single-print a, .layout_print .series-gallery a, .about-series a {
@@ -539,23 +529,28 @@ body {
 .gallery {
   margin-bottom: 20px;
   overflow: hidden; }
+  .gallery figure {
+    margin-bottom: 40px; }
+  .gallery .print img {
+    max-height: 240px; }
 
 .print figcaption {
   margin: 0; }
 
+.featured .print img,
 .layout_print .print img {
   border: 10px solid #fafafa; }
 
-.layout_home .about, .layout_home .blog-list, .layout_home .galleries .single-print, .layout_home .galleries .series-teaser, .layout_print .series-gallery, .about-series {
+.layout_home .featured, .layout_home .about, .layout_home .blog-list, .layout_home .galleries .single-print, .layout_home .galleries .series-teaser, .layout_print .series-gallery, .about-series {
   border-bottom-style: dotted;
   border-bottom-width: 1px;
   overflow: hidden;
   padding: 20px 0 25px;
   margin-bottom: 0; }
-  .layout_home .about .h1, .layout_home .blog-list .h1, .layout_home .galleries .single-print .h1, .layout_home .galleries .series-teaser .h1, .layout_print .series-gallery .h1, .about-series .h1, .layout_home .about .h2, .layout_home .blog-list .h2, .layout_home .galleries .single-print .h2, .layout_home .galleries .series-teaser .h2, .layout_print .series-gallery .h2, .about-series .h2 {
+  .layout_home .featured .h1, .layout_home .about .h1, .layout_home .blog-list .h1, .layout_home .galleries .single-print .h1, .layout_home .galleries .series-teaser .h1, .layout_print .series-gallery .h1, .about-series .h1, .layout_home .featured .h2, .layout_home .about .h2, .layout_home .blog-list .h2, .layout_home .galleries .single-print .h2, .layout_home .galleries .series-teaser .h2, .layout_print .series-gallery .h2, .about-series .h2 {
     margin: 0;
     padding: 0 0 10px 0; }
-  .layout_home .about .image-wrapper, .layout_home .blog-list .image-wrapper, .layout_home .galleries .single-print .image-wrapper, .layout_home .galleries .series-teaser .image-wrapper, .layout_print .series-gallery .image-wrapper, .about-series .image-wrapper {
+  .layout_home .featured .image-wrapper, .layout_home .about .image-wrapper, .layout_home .blog-list .image-wrapper, .layout_home .galleries .single-print .image-wrapper, .layout_home .galleries .series-teaser .image-wrapper, .layout_print .series-gallery .image-wrapper, .about-series .image-wrapper {
     overflow: hidden; }
 
 .blog-post {
@@ -593,6 +588,7 @@ body {
     right: 0; } }
 
 .page-footer {
+  border-top: 1px solid #cccccc;
   margin-top: 20px;
   padding: 20px 0; }
   .page-footer :first-child {

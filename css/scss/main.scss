@@ -19,6 +19,7 @@
 .layout_home {
 
 	.featured {
+		@extend %contentBlock;
 		//@extend %contentBlockBgColor;
 		//@extend %themeBlackBg;
 	}
