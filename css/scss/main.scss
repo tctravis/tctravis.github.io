@@ -30,6 +30,10 @@
 			border-top: none !important;
 		}
 	}
+	.contact {
+		@extend %contentBlock;
+		@extend %themeYellowOchre;
+	}
 	.blog-list {
 		@extend %contentBlock;
 		@extend %themeYellowOchre;
@@ -65,8 +69,25 @@
 			border-top: none;
 		}
 	}
+	.contact {
+		@extend %contentBlock;
+		@extend %themeYellowOchre;
+	}
 
 }
+
+.layout_gallery {
+	@extend %themePrussianBlue;
+}
+
+.layout_series {
+	@extend %themePrussianBlue;
+	.contact {
+		@extend %contentBlock;
+		@extend %themeYellowOchre;
+	}
+}
+
 
 
 // series pages

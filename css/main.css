@@ -246,7 +246,8 @@ a {
     float: left;
     margin-left: 0;
     margin-right: 0; }
-    .layout_home .misc-info .about {
+    .layout_home .misc-info .about,
+    .layout_home .misc-info .contact {
       width: 40%;
       float: right;
       margin-right: 0; }
@@ -260,7 +261,8 @@ a {
     width: 22.85714%;
     float: left;
     margin-right: 2.85714%; }
-    .layout_home .misc-info .about {
+    .layout_home .misc-info .about,
+    .layout_home .misc-info .contact {
       width: 100%;
       float: left;
       margin-left: 0;
@@ -413,7 +415,7 @@ a {
     float: left;
     margin-right: 2.85714%; }
   .layout_print .print-related {
-    width: 31.42857%;
+    width: 22.85714%;
     float: right;
     margin-right: 0; }
     .layout_print .print-related .gallery .print {
@@ -479,8 +481,8 @@ body {
       font-size: 1.875rem; } }
   @media (min-width: 62.5em) {
     .h1 {
-      font-size: 32px;
-      font-size: 2rem; } }
+      font-size: 34px;
+      font-size: 2.125rem; } }
 
 .h2 {
   font-size: 22px;
@@ -498,24 +500,25 @@ body {
   font-size: 18px;
   font-size: 1.125rem; }
 
-.print, .layout_home .about, .layout_home .galleries .single-print, .layout_print .series-gallery, .about-series {
+.print, .page-footer, .layout_home .about, .layout_home .galleries .single-print, .layout_print .series-gallery, .layout_gallery, .layout_series, .about-series {
   border-color: #003153; }
-  .print .h1, .layout_home .about .h1, .layout_home .galleries .single-print .h1, .layout_print .series-gallery .h1, .about-series .h1, .print .h2, .layout_home .about .h2, .layout_home .galleries .single-print .h2, .layout_print .series-gallery .h2, .about-series .h2, .print a, .layout_home .about a, .layout_home .galleries .single-print a, .layout_print .series-gallery a, .about-series a {
+  .print .h1, .page-footer .h1, .layout_home .about .h1, .layout_home .galleries .single-print .h1, .layout_print .series-gallery .h1, .layout_gallery .h1, .layout_series .h1, .about-series .h1, .print .h2, .page-footer .h2, .layout_home .about .h2, .layout_home .galleries .single-print .h2, .layout_print .series-gallery .h2, .layout_gallery .h2, .layout_series .h2, .about-series .h2, .print a, .page-footer a, .layout_home .about a, .layout_home .galleries .single-print a, .layout_print .series-gallery a, .layout_gallery a, .layout_series a, .about-series a {
     color: #003153; }
-  .print .button, .layout_home .about .button, .layout_home .galleries .single-print .button, .layout_print .series-gallery .button, .about-series .button {
+  .print .button, .page-footer .button, .layout_home .about .button, .layout_home .galleries .single-print .button, .layout_print .series-gallery .button, .layout_gallery .button, .layout_series .button, .about-series .button {
     background-color: #003153;
     color: #fff; }
 
-.layout_home .blog-list, .layout_home .galleries .series-teaser {
+.layout_home .contact, .layout_home .blog-list, .layout_home .galleries .series-teaser, .layout_print .contact, .layout_series .contact {
   border-color: #CC7722; }
-  .layout_home .blog-list .h1, .layout_home .galleries .series-teaser .h1, .layout_home .blog-list .h2, .layout_home .galleries .series-teaser .h2, .layout_home .blog-list a, .layout_home .galleries .series-teaser a {
+  .layout_home .contact .h1, .layout_home .blog-list .h1, .layout_home .galleries .series-teaser .h1, .layout_print .contact .h1, .layout_series .contact .h1, .layout_home .contact .h2, .layout_home .blog-list .h2, .layout_home .galleries .series-teaser .h2, .layout_print .contact .h2, .layout_series .contact .h2, .layout_home .contact a, .layout_home .blog-list a, .layout_home .galleries .series-teaser a, .layout_print .contact a, .layout_series .contact a {
     color: #CC7722; }
-  .layout_home .blog-list .button, .layout_home .galleries .series-teaser .button {
+  .layout_home .contact .button, .layout_home .blog-list .button, .layout_home .galleries .series-teaser .button, .layout_print .contact .button, .layout_series .contact .button {
     background-color: #CC7722;
     color: #fff; }
 
 .button {
   display: inline-block;
+  margin: 10px 0;
   padding: 8px 10px;
   text-decoration: none;
   border-bottom: none;
@@ -529,28 +532,44 @@ body {
 .gallery {
   margin-bottom: 20px;
   overflow: hidden; }
-  .gallery figure {
-    margin-bottom: 40px; }
-  .gallery .print img {
+  .layout_series .gallery img {
+    max-height: 400px; }
+  .layout_gallery .gallery img {
     max-height: 240px; }
 
+.print .h2 {
+  margin-top: 0; }
+
+.print a {
+  border: none;
+  display: inline-block; }
+
 .print figcaption {
-  margin: 0; }
+  margin: 10px 0 20px; }
+  .print figcaption p {
+    margin: 0; }
+    .print figcaption p:first-child {
+      font-weight: 700;
+      margin-bottom: 10px; }
+  .print figcaption a {
+    display: inline; }
 
 .featured .print img,
 .layout_print .print img {
   border: 10px solid #fafafa; }
 
-.layout_home .featured, .layout_home .about, .layout_home .blog-list, .layout_home .galleries .single-print, .layout_home .galleries .series-teaser, .layout_print .series-gallery, .about-series {
+.layout_home .featured, .layout_home .about, .layout_home .contact, .layout_home .blog-list, .layout_home .galleries .single-print, .layout_home .galleries .series-teaser, .layout_print .series-gallery, .layout_print .contact, .layout_series .contact, .about-series {
   border-bottom-style: dotted;
   border-bottom-width: 1px;
   overflow: hidden;
   padding: 20px 0 25px;
   margin-bottom: 0; }
-  .layout_home .featured .h1, .layout_home .about .h1, .layout_home .blog-list .h1, .layout_home .galleries .single-print .h1, .layout_home .galleries .series-teaser .h1, .layout_print .series-gallery .h1, .about-series .h1, .layout_home .featured .h2, .layout_home .about .h2, .layout_home .blog-list .h2, .layout_home .galleries .single-print .h2, .layout_home .galleries .series-teaser .h2, .layout_print .series-gallery .h2, .about-series .h2 {
+  .layout_home .featured .h1, .layout_home .about .h1, .layout_home .contact .h1, .layout_home .blog-list .h1, .layout_home .galleries .single-print .h1, .layout_home .galleries .series-teaser .h1, .layout_print .series-gallery .h1, .layout_print .contact .h1, .layout_series .contact .h1, .about-series .h1, .layout_home .featured .h2, .layout_home .about .h2, .layout_home .contact .h2, .layout_home .blog-list .h2, .layout_home .galleries .single-print .h2, .layout_home .galleries .series-teaser .h2, .layout_print .series-gallery .h2, .layout_print .contact .h2, .layout_series .contact .h2, .about-series .h2 {
     margin: 0;
     padding: 0 0 10px 0; }
-  .layout_home .featured .image-wrapper, .layout_home .about .image-wrapper, .layout_home .blog-list .image-wrapper, .layout_home .galleries .single-print .image-wrapper, .layout_home .galleries .series-teaser .image-wrapper, .layout_print .series-gallery .image-wrapper, .about-series .image-wrapper {
+  .layout_home .featured p, .layout_home .about p, .layout_home .contact p, .layout_home .blog-list p, .layout_home .galleries .single-print p, .layout_home .galleries .series-teaser p, .layout_print .series-gallery p, .layout_print .contact p, .layout_series .contact p, .about-series p {
+    margin-top: 0; }
+  .layout_home .featured .image-wrapper, .layout_home .about .image-wrapper, .layout_home .contact .image-wrapper, .layout_home .blog-list .image-wrapper, .layout_home .galleries .single-print .image-wrapper, .layout_home .galleries .series-teaser .image-wrapper, .layout_print .series-gallery .image-wrapper, .layout_print .contact .image-wrapper, .layout_series .contact .image-wrapper, .about-series .image-wrapper {
     overflow: hidden; }
 
 .blog-post {
@@ -588,11 +607,12 @@ body {
     right: 0; } }
 
 .page-footer {
-  border-top: 1px solid #cccccc;
-  margin-top: 20px;
-  padding: 20px 0; }
+  margin-top: 20px; }
   .page-footer :first-child {
     margin-top: 0; }
+  .page-footer .wrap {
+    border-top: 1px solid #cccccc;
+    padding: 20px 0; }
 
 @media (min-width: 28.75em) and (max-width: 62.5em) {
   .layout_home .about {
