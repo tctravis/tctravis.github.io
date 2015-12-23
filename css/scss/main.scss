@@ -26,11 +26,9 @@
 	.about {
 		@extend %contentBlock;
 		@extend %themePrussianBlue;
-		@include breakpoint(pxToEms($bp-main-one) pxToEms($bp-main-two)) {
-			border-top: none !important;
-		}
 	}
 	.contact {
+		border-bottom-width: 0;
 		@extend %contentBlock;
 		@extend %themeYellowOchre;
 	}
@@ -46,6 +44,30 @@
 		.series-teaser {
 			@extend %contentBlock;
 			@extend %themeYellowOchre;
+			&:nth-child(2){
+				@extend %themePrussianBlue;
+			}
+		}
+	}
+	@include breakpoint(pxToEms($bp-main-one)) {
+		.featured {
+			border-bottom-width: 0;
+		}
+		.about,
+		.contact {
+			border-bottom-width: 0;
+			border-top-width: 1px;
+		}
+		.galleries {
+			:last-child {
+				border-bottom-width: 0;
+			}
+		}
+	}
+	@include breakpoint(pxToEms($bp-main-two)) {
+		.about {
+			border-bottom-width: 1px;
+			border-top-width: 0;
 		}
 	}
 	
@@ -55,25 +77,26 @@
 // print pages
 .layout_print {
 
+	.print-body {
+		@extend %contentBlock;
+	}
 	.series-gallery {
 		@extend %contentBlock;
 		@extend %themePrussianBlue;
 	}
-	.print-related {
-		border-bottom: none;
-		border-top-style: dotted;
-		border-top-width: 1px;
+	.contact {
+		border-bottom-width: 0;
+		@extend %contentBlock;
+		@extend %themeYellowOchre;
 	}
 	@include breakpoint(pxToEms($bp-main-one)) {
+		.print-body {
+			border-bottom-width: 0;
+		}
 		.print-related {
 			border-top: none;
 		}
 	}
-	.contact {
-		@extend %contentBlock;
-		@extend %themeYellowOchre;
-	}
-
 }
 
 .layout_gallery {
@@ -82,21 +105,24 @@
 
 .layout_series {
 	@extend %themePrussianBlue;
+	.series-gallery {
+		@extend %contentBlock;
+	}
+	.about-series {
+		@extend %contentBlock;
+		@extend %themePrussianBlue;
+	}
 	.contact {
+		border-bottom-width: 0;
 		@extend %contentBlock;
 		@extend %themeYellowOchre;
 	}
+	@include breakpoint(pxToEms($bp-main-one)) {
+		.series-gallery {
+			border-bottom-width: 0;
+		}
+	}
 }
-
-
-
-// series pages
-.about-series {
-	@extend %contentBlock;
-	@extend %themePrussianBlue;
-}
-
-
 
 
 
