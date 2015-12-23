@@ -375,7 +375,7 @@ a {
 
 @media (min-width: 28.75em) {
   .layout_series .series-gallery {
-    width: 65.71429%;
+    width: 57.14286%;
     float: left;
     margin-right: 2.85714%; }
     .layout_series .series-gallery .print {
@@ -390,6 +390,16 @@ a {
         margin-left: 52.17391%;
         margin-right: -100%;
         clear: none; }
+  .layout_series .series-related {
+    width: 40%;
+    float: right;
+    margin-right: 0; } }
+
+@media (min-width: 28.75em) {
+  .layout_series .series-gallery {
+    width: 74.28571%;
+    float: left;
+    margin-right: 2.85714%; }
   .layout_series .series-related {
     width: 22.85714%;
     float: right;
@@ -410,11 +420,11 @@ a {
 
 @media (min-width: 28.75em) {
   .layout_print .print-body {
-    width: 65.71429%;
+    width: 57.14286%;
     float: left;
     margin-right: 2.85714%; }
   .layout_print .print-related {
-    width: 22.85714%;
+    width: 40%;
     float: right;
     margin-right: 0; }
     .layout_print .print-related .gallery .print {
@@ -429,6 +439,16 @@ a {
         margin-left: 54.54545%;
         margin-right: -100%;
         clear: none; } }
+
+@media (min-width: 62.5em) {
+  .layout_print .print-body {
+    width: 74.28571%;
+    float: left;
+    margin-right: 2.85714%; }
+  .layout_print .print-related {
+    width: 22.85714%;
+    float: right;
+    margin-right: 0; } }
 
 .site-title, .h1, .h2, .button {
   font-family: 'Montserrat', 'Open Sans', arial, sans-serif;
@@ -507,11 +527,11 @@ body {
     background-color: #003153;
     color: #fff; }
 
-.layout_home .contact, .layout_home .blog-list, .layout_home .galleries .series-teaser, .layout_print .contact, .layout_series .contact {
+.layout_home .featured, .layout_home .contact, .layout_home .blog-list, .layout_home .galleries .series-teaser, .layout_print .print-body, .layout_print .contact, .layout_series .series-gallery, .layout_series .contact {
   border-color: #CC7722; }
-  .layout_home .contact .h1, .layout_home .blog-list .h1, .layout_home .galleries .series-teaser .h1, .layout_print .contact .h1, .layout_series .contact .h1, .layout_home .contact .h2, .layout_home .blog-list .h2, .layout_home .galleries .series-teaser .h2, .layout_print .contact .h2, .layout_series .contact .h2, .layout_home .contact a, .layout_home .blog-list a, .layout_home .galleries .series-teaser a, .layout_print .contact a, .layout_series .contact a {
+  .layout_home .featured .h1, .layout_home .contact .h1, .layout_home .blog-list .h1, .layout_home .galleries .series-teaser .h1, .layout_print .print-body .h1, .layout_print .contact .h1, .layout_series .series-gallery .h1, .layout_series .contact .h1, .layout_home .featured .h2, .layout_home .contact .h2, .layout_home .blog-list .h2, .layout_home .galleries .series-teaser .h2, .layout_print .print-body .h2, .layout_print .contact .h2, .layout_series .series-gallery .h2, .layout_series .contact .h2, .layout_home .featured a, .layout_home .contact a, .layout_home .blog-list a, .layout_home .galleries .series-teaser a, .layout_print .print-body a, .layout_print .contact a, .layout_series .series-gallery a, .layout_series .contact a {
     color: #CC7722; }
-  .layout_home .contact .button, .layout_home .blog-list .button, .layout_home .galleries .series-teaser .button, .layout_print .contact .button, .layout_series .contact .button {
+  .layout_home .featured .button, .layout_home .contact .button, .layout_home .blog-list .button, .layout_home .galleries .series-teaser .button, .layout_print .print-body .button, .layout_print .contact .button, .layout_series .series-gallery .button, .layout_series .contact .button {
     background-color: #CC7722;
     color: #fff; }
 
@@ -531,6 +551,8 @@ body {
 .gallery {
   margin-bottom: 20px;
   overflow: hidden; }
+  .gallery a {
+    color: #003153 !important; }
   .layout_series .gallery img {
     max-height: 400px; }
   .layout_gallery .gallery img {
@@ -567,6 +589,12 @@ body {
     margin-top: 0; }
   .layout_home .featured .image-wrapper, .layout_home .about .image-wrapper, .layout_home .contact .image-wrapper, .layout_home .blog-list .image-wrapper, .layout_home .galleries .single-print .image-wrapper, .layout_home .galleries .series-teaser .image-wrapper, .layout_print .print-body .image-wrapper, .layout_print .series-gallery .image-wrapper, .layout_print .contact .image-wrapper, .layout_series .series-gallery .image-wrapper, .layout_series .about-series .image-wrapper, .layout_series .contact .image-wrapper {
     overflow: hidden; }
+  @media (min-width: 28.75em) {
+    .layout_home .featured .h1, .layout_home .about .h1, .layout_home .contact .h1, .layout_home .blog-list .h1, .layout_home .galleries .single-print .h1, .layout_home .galleries .series-teaser .h1, .layout_print .print-body .h1, .layout_print .series-gallery .h1, .layout_print .contact .h1, .layout_series .series-gallery .h1, .layout_series .about-series .h1, .layout_series .contact .h1 {
+      margin-top: -6px; } }
+  @media (min-width: 62.5em) {
+    .layout_home .featured .h1, .layout_home .about .h1, .layout_home .contact .h1, .layout_home .blog-list .h1, .layout_home .galleries .single-print .h1, .layout_home .galleries .series-teaser .h1, .layout_print .print-body .h1, .layout_print .series-gallery .h1, .layout_print .contact .h1, .layout_series .series-gallery .h1, .layout_series .about-series .h1, .layout_series .contact .h1 {
+      margin-top: -8px; } }
 
 .blog-post {
   margin-bottom: 20px; }
